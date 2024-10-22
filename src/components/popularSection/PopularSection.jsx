@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import PopularCard from './PopularCard';
 import Modal from './Modal';
+import { forwardRef } from "react";
 
-const PopularSection = () => {
+
+const PopularSection = forwardRef((props, ref) => {
     const [districts, setDistricts] = useState([]);
     const [selectedDistrict, setSelectedDistrict] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -43,9 +45,9 @@ const PopularSection = () => {
     if (error) {
         return <div>Error al cargar los datos: {error}</div>;
     }
-
-    return (
-        <section className="py-14 bg-darkBlue">
+      
+      return (
+        <section ref={ref} className="py-14 bg-darkBlue">
             <div className="max-w-screen-lg px-6 mx-auto">
                 <h2 className="mb-10 text-4xl text-center text-white font-sora">Els barris més populars</h2>
                 <div className="mb-12">
@@ -73,6 +75,8 @@ const PopularSection = () => {
             )}
         </section>
     );
-};
+});
+
+PopularSection.displayName = "PopularSectionComponent";
 
 export default PopularSection;
