@@ -48,7 +48,7 @@ const Navbar = ({handleScroll}) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-24 left-0 w-full bg-mediumBlue p-2 z-20">
+        <div className="md:hidden absolute top-24 left-0 w-full bg-blueViolet p-2 z-20">
           <button onClick={() => { handleScroll('popular'), toggleMenu()}} className="block px-4 py-2 text-white">
             · Barris més populars
           </button>
