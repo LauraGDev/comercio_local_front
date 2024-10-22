@@ -1,0 +1,78 @@
+[
+    {
+        "name": "Sarrià",
+        "image": "/popular/sarria.jpg",
+        "numBusinesses": 999,
+        "diversity": "2 categorías principales",
+        "featuredBusinessRatio": "91.59%",
+        "averageBusinessAge": 2.77,
+        "averageBusinessValue": 9.66,
+        "businessSize": {
+            "small": "30.33%",
+            "medium": "53.35%",
+            "large": "16.33%"
+        },
+        "density": {
+            "perSquareMeter": "0.00322 negocios por metro cuadrado",
+            "avgDistanceBetweenBusinesses": "0.0032 metros"
+        },
+        "recommendations": "Sarrià es ideal para inversores que busquen áreas en expansión comercial."
+    },
+    {
+        "name": "Poblenou",
+        "image": "/popular/poblenou.jpg",
+        "numBusinesses": 1512,
+        "diversity": "2 categorías principales",
+        "featuredBusinessRatio": "89.35%",
+        "averageBusinessAge": 2.64,
+        "averageBusinessValue": 9.97,
+        "businessSize": {
+            "small": "25.91%",
+            "medium": "54.16%",
+            "large": "19.92%"
+        },
+        "density": {
+            "perSquareMeter": "0.00277 negocios por metro cuadrado",
+            "avgDistanceBetweenBusinesses": "Distancia promedio reducida"
+        },
+        "recommendations": "Poblenou tiene un perfil tecnológico e industrial, ideal para empresas de mayor envergadura."
+    },
+    {
+        "name": "El Clot",
+        "image": "/popular/clot.jpg",
+        "numBusinesses": 861,
+        "diversity": "2 categorías principales",
+        "featuredBusinessRatio": "89.08%",
+        "averageBusinessAge": 2.76,
+        "averageBusinessValue": 9.54,
+        "businessSize": {
+            "small": "29.26%",
+            "medium": "52.62%",
+            "large": "18.12%"
+        },
+        "density": {
+            "perSquareMeter": "0.00256 negocios por metro cuadrado",
+            "avgDistanceBetweenBusinesses": "Cercanía entre negocios"
+        },
+        "recommendations": "El Clot es un barrio favorable para comercios comunitarios en expansión."
+    },
+    {
+        "name": "Poble Sec",
+        "image": "/popular/poblesec.jpeg",
+        "numBusinesses": 1288,
+        "diversity": "2 categorías principales",
+        "featuredBusinessRatio": "86.33%",
+        "averageBusinessAge": 2.78,
+        "averageBusinessValue": 10.08,
+        "businessSize": {
+            "small": "31.65%",
+            "medium": "55.45%",
+            "large": "12.90%"
+        },
+        "density": {
+            "perSquareMeter": "0.00152 negocios por metro cuadrado",
+            "avgDistanceBetweenBusinesses": "Alta disponibilidad de espacio"
+        },
+        "recommendations": "Poble Sec tiene potencial para alianzas entre pequeños y medianos comercios."
+    }
+]
