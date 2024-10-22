@@ -8,7 +8,7 @@ const PopularCard = ({ name, image, description, onClick }) => {
     const handleClick = () => {
         setShowModal(true);
         if (onClick) {
-            onClick(); // Llama a la función onClick pasada desde el componente padre
+            onClick();
         }
     };
 
