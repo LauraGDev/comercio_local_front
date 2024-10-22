@@ -1,22 +1,35 @@
 /* eslint-disable react/prop-types */
+import { useEffect } from "react";
+
 const Modal = ({ show, onClose, district }) => {
+
+    useEffect(() => {
+        if (show) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [show]);
+
+
     if (!show || !district) {
         return null;
     }
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
-            <div className="relative w-full max-w-4xl p-10 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-xl">
-                {/* Imagen del barrio */}
+            <div className="relative w-full max-w-4xl p-4 md:p-10 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-xl">
                 <img 
                     src={district.image} 
                     alt={`Imagen de ${district.name}`} 
-                    className="object-cover w-full h-64 mb-6 rounded-lg"
+                    className="object-cover w-full h-48 md:h-64 mb-4 md:mb-6 rounded-lg"
                 />
-
-                <h2 className="mb-6 text-3xl font-bold text-darkBlue">{district.name}</h2>
-
-                <div className="mb-6 text-gray-700">
+                <h2 className="mb-4 text-2xl md:text-3xl font-bold text-darkBlue">{district.name}</h2>
+                <div className="mb-4 text-sm md:text-base text-gray-700">
                     <p><strong>Número de negocios:</strong> {district.numBusinesses}</p>
                     <p><strong>Antigüedad promedio:</strong> {district.averageBusinessAge} años</p>
                     <p><strong>Diversidad de negocios:</strong> {district.diversity}</p>
