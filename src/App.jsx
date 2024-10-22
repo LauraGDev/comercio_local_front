@@ -1,27 +1,31 @@
-import { useState } from 'react'
+import Navbar from "./components/Navbar";
+import PopularSections from "./components/PopularSections";
+import Form from "./components/Form";
+import { useRef } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Define un objeto con las referencias
+  const sectionsRef = useRef({
+    android: null, // Asegúrate de que la clave coincida con la referencia.
+    apple: null,
+  });
+
+  // Maneja el scroll hacia la sección correcta
+  const handleScroll = (key) => {
+
+    if (sectionsRef.current[key]) {
+      sectionsRef.current[key].scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
-      <div>
-        
-      </div>
-      <h1 className='text-4xl'>Vite + React</h1>
-      <div className="card bg-red-600">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar  handleScroll={handleScroll} />
+      <PopularSections />
+      {/* Asegúrate de que la referencia se asigne correctamente */}
+      <Form ref={(el) => (sectionsRef.current.android = el)} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
