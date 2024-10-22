@@ -1,8 +1,8 @@
 
 import Navbar from "./components/Navbar";
 import PopularSections from "./components/PopularSections";
-import Form from "./components/Form";
 import { useRef } from "react";
+import FormSection from "./components/formSection/FormSection";
 
 function App() {
   // Define un objeto con las referencias
@@ -24,7 +24,7 @@ function App() {
       <Navbar  handleScroll={handleScroll} />
       <PopularSections />
       {/* Asegúrate de que la referencia se asigne correctamente */}
-      <Form ref={(el) => (sectionsRef.current.android = el)} />
+      <FormSection ref={(el) => (sectionsRef.current.android = el)} />
 
     </>
   );
