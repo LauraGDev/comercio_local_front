@@ -16,15 +16,15 @@ const FormSection = forwardRef((props, ref) => {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="p-4" ref={ref}>
+        <form onSubmit={handleSubmit(onSubmit)} className="p-4 max-w-7xl px-4 m-auto w-full md:w-[500px] pb-32" ref={ref}>
             <div className="mb-4">
                 <label htmlFor="districts">Barri</label>
                 <select
                     id="districts"
                     {...register("district", { required: true })}
-                    className="block w-full mt-1 p-2 border"
+                    className="block w-full mt-1 p-2 border text-darkBlue rounded-lg"
                 >
-                    <option value="">Selecciona un barri</option>
+                    <option value="" className="font-sora">Selecciona un barri</option>
                     {districts.map((district) => (
                         <option key={district.id} value={district.id}>
                             {district.nombre}
@@ -40,7 +40,7 @@ const FormSection = forwardRef((props, ref) => {
                 <select
                     id="activities"
                     {...register("activity", { required: true })}
-                    className="block w-full mt-1 p-2 border"
+                    className="block w-full mt-1 p-2 border text-darkBlue rounded-lg"
                 >
                     <option value="">Selecciona una activitat</option>
                     {activities.map((activity) => (
@@ -54,8 +54,9 @@ const FormSection = forwardRef((props, ref) => {
                 )}
             </div>
             <button
+                
                 type="submit"
-                className="bg-blue-500 text-white p-2 rounded"
+                className="bg-purple text-white p-2 rounded-lg w-full mt-5"
             >
                 Enviar
             </button>
