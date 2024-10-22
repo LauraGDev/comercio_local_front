@@ -1,3 +1,4 @@
+
 import Navbar from "./components/Navbar";
 import PopularSections from "./components/PopularSections";
 import Form from "./components/Form";
@@ -24,6 +25,7 @@ function App() {
       <PopularSections />
       {/* Asegúrate de que la referencia se asigne correctamente */}
       <Form ref={(el) => (sectionsRef.current.android = el)} />
+
     </>
   );
 }
