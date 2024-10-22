@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
-import { forwardRef } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import useFetch from "../../customHooks/useFetch";
+import { GET_DISTRICTS_ACTIVITIES } from "../../config"
 
 const FormSection = forwardRef((props, ref) => {
     const {
@@ -8,8 +9,17 @@ const FormSection = forwardRef((props, ref) => {
         handleSubmit,
         formState: { errors },
     } = useForm();
-    const { data: districts } = useFetch("/barrisVius/neighborhoodsActivities");
-    const { data: activities } = useFetch("/api/actividades-economicas");
+    const { data } = useFetch(GET_DISTRICTS_ACTIVITIES);
+    const [districts, setDistricts] = useState([]);
+    const [activities, setActivities] = useState([]);
+
+    useEffect(() => {
+        if (data) {
+            setDistricts(data.neighborhoodNames || []);
+            setActivities(data.activitiesNames || []);
+            console.log(data)
+        }
+    }, [data]);
 
     const onSubmit = (data) => {
         console.log(data);
