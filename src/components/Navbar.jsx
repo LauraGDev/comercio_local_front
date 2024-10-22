@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logoConTexto from "/logoConTexto.svg";
@@ -20,10 +21,10 @@ const Navbar = ({handleScroll}) => {
             </div>
           </div>
           <div className="hidden md:flex space-x-6 items-center">
-            <button className="text-white hover:text-gray-400">
+            <button onClick={() => { handleScroll('popular'), toggleMenu()}} className="text-white hover:text-gray-400">
               Barris més populars
             </button>
-            <button className="text-white hover:text-gray-400">
+            <button onClick={() => { handleScroll('form'), toggleMenu()}} className="text-white hover:text-gray-400">
               Vols obrir un negoci?
             </button>
             <button className="text-white hover:text-gray-400">
@@ -52,7 +53,7 @@ const Navbar = ({handleScroll}) => {
           <button onClick={() => { handleScroll('popular'), toggleMenu()}} className="block px-4 py-2 text-white">
             · Barris més populars
           </button>
-          <button className="block px-4 py-2 text-white">
+          <button onClick={() => { handleScroll('form'), toggleMenu()}} className="block px-4 py-2 text-white">
             · Vols obrir un negoci?
           </button>
           <button className="block px-4 py-2 text-white">
