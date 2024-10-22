@@ -8,7 +8,7 @@ const FormSection = forwardRef((props, ref) => {
         handleSubmit,
         formState: { errors },
     } = useForm();
-    const { data: districts } = useFetch("/api/barris");
+    const { data: districts } = useFetch("/barrisVius/neighborhoodsActivities");
     const { data: activities } = useFetch("/api/actividades-economicas");
 
     const onSubmit = (data) => {
@@ -16,7 +16,9 @@ const FormSection = forwardRef((props, ref) => {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="p-4 max-w-7xl px-4 m-auto w-full md:w-[500px] pb-32" ref={ref}>
+        <form onSubmit={handleSubmit(onSubmit)} className="p-4 max-w-7xl px-4 m-auto w-full md:w-[500px] pb-32 mt-10" ref={ref}>
+            <h2 className="text-3xl font-bold mb-3">Vols obrir un negoci?</h2>
+            <p className="font-thin mb-3">Selecciona el barri i l&apos;activitat econòmica del teu futur negoci per obtenir un informe personalitzat d&apos;intel·ligència de negoci.</p>
             <div className="mb-4">
                 <label htmlFor="districts">Barri</label>
                 <select
@@ -56,7 +58,7 @@ const FormSection = forwardRef((props, ref) => {
             <button
                 
                 type="submit"
-                className="bg-purple text-white p-2 rounded-lg w-full mt-5"
+                className="bg-blueViolet text-white p-2 rounded-lg w-full mt-5"
             >
                 Enviar
             </button>
