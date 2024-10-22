@@ -2,11 +2,14 @@
 import { useState } from 'react';
 import Modal from './Modal';
 
-const PopularCard = ({ name, image, description }) => {
+const PopularCard = ({ name, image, description, onClick }) => {
     const [showModal, setShowModal] = useState(false);
 
     const handleClick = () => {
         setShowModal(true);
+        if (onClick) {
+            onClick(); // Llama a la función onClick pasada desde el componente padre
+        }
     };
 
     return (
