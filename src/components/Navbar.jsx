@@ -27,12 +27,6 @@ const Navbar = ({handleScroll}) => {
             <button onClick={() => { handleScroll('form'), toggleMenu()}} className="text-white hover:text-gray-400">
               Vols obrir un negoci?
             </button>
-            <button className="text-white hover:text-gray-400">
-              About us
-            </button>
-            <button className="text-white hover:text-gray-400">
-              Contacte
-            </button>
           </div>
 
           {/* Mobile Menu Icon */}
@@ -55,12 +49,6 @@ const Navbar = ({handleScroll}) => {
           </button>
           <button onClick={() => { handleScroll('form'), toggleMenu()}} className="block px-4 py-2 text-white">
             · Vols obrir un negoci?
-          </button>
-          <button className="block px-4 py-2 text-white">
-            · About us
-          </button>
-          <button className="block px-4 py-2 text-white">
-            · Contacte
           </button>
         </div>
       )}
