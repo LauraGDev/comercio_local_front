@@ -9,10 +9,8 @@ const Navbar = ({handleScroll}) => {
     setIsOpen(!isOpen);
   };
 
-
-
   return (
-    <nav className="bg-mediumBlue shadow-lg fixed w-full z-10">
+    <nav className="bg-mediumBlue shadow-lg w-full z-10">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 border-b-2 border-solid border-slate-400">
         <div className="flex justify-between h-24">
           <div className="flex items-center">
@@ -22,16 +20,16 @@ const Navbar = ({handleScroll}) => {
             </div>
           </div>
           <div className="hidden md:flex space-x-6 items-center">
-            <button className="text-white hover:text-gray-900">
+            <button className="text-white hover:text-gray-400">
               Barris més populars
             </button>
-            <button className="text-white hover:text-gray-900">
+            <button className="text-white hover:text-gray-400">
               Vols obrir un negoci?
             </button>
-            <button className="text-white hover:text-gray-900">
+            <button className="text-white hover:text-gray-400">
               About us
             </button>
-            <button className="text-white hover:text-gray-900">
+            <button className="text-white hover:text-gray-400">
               Contacte
             </button>
           </div>
@@ -50,17 +48,17 @@ const Navbar = ({handleScroll}) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden p-2">
-          <button className="block px-4 py-2 text-white hover:bg-gray-100">
+        <div className="md:hidden absolute top-24 left-0 w-full bg-mediumBlue p-2 z-20">
+          <button onClick={() => { handleScroll('popular'), toggleMenu()}} className="block px-4 py-2 text-white">
             · Barris més populars
           </button>
-          <button onClick={() => { handleScroll('android'), toggleMenu()}} className="block px-4 py-2 text-white hover:bg-gray-100">
+          <button className="block px-4 py-2 text-white">
             · Vols obrir un negoci?
           </button>
-          <button className="block px-4 py-2 text-white hover:bg-gray-100">
+          <button className="block px-4 py-2 text-white">
             · About us
           </button>
-          <button className="block px-4 py-2 text-white hover:bg-gray-100">
+          <button className="block px-4 py-2 text-white">
             · Contacte
           </button>
         </div>

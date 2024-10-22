@@ -1,17 +1,15 @@
-
 import Navbar from "./components/Navbar";
 import PopularSections from "./components/PopularSections";
-import Form from "./components/Form";
 import { useRef } from "react";
+import HeroSection from "./components/heroSection/HeroSection";
+import Footer from "./components/Footer";
 
 function App() {
-  // Define un objeto con las referencias
   const sectionsRef = useRef({
-    android: null, // Asegúrate de que la clave coincida con la referencia.
-    apple: null,
+    popular: null,
+    form: null,
   });
 
-  // Maneja el scroll hacia la sección correcta
   const handleScroll = (key) => {
 
     if (sectionsRef.current[key]) {
@@ -21,11 +19,10 @@ function App() {
 
   return (
     <>
-      <Navbar  handleScroll={handleScroll} />
-      <PopularSections />
-      {/* Asegúrate de que la referencia se asigne correctamente */}
-      <Form ref={(el) => (sectionsRef.current.android = el)} />
-
+      <Navbar handleScroll={handleScroll} />
+      <HeroSection />
+      <PopularSections ref={(el) => (sectionsRef.current.popular = el)} />
+      <Footer />
     </>
   );
 }
