@@ -9,9 +9,10 @@ The platform provides essential commercial data to entrepreneurs, helping them i
 4. [Starting the Project](#-starting-the-project)
 5. [Features](#-features)
 6. [Screenshots](#-screenshots)
-7. [Related Repositories](#related-repositories)
-8. [Contributing](#-contributing)
-9. [Contact](#-contact)
+7. [Presentation](#-presentation)
+8. [Related Repositories](#related-repositories)
+9. [Contributing](#-contributing)
+10. [Contact](#-contact)
 
 
 1. ## 🔧 Prerequisites
@@ -61,7 +62,28 @@ This project utilizes the following technologies:
 
 6. ## 🖼 Screenshots
 
-7. ## 📂 Related Repositories
+### Mobile Screenshots
+
+![Mobile Screenshot 1](./public/screenshots/mobile1.png)
+![Mobile Screenshot 2](./public/screenshots/mobile2.png)
+![Mobile Screenshot 3](./public/screenshots/mobile3.png)
+![Mobile Screenshot 4](./public/screenshots/mobile4.png)
+
+### Desktop Screenshots
+
+![Desktop Screenshot 1](./public/screenshots/desktop1.png)
+![Desktop Screenshot 2](./public/screenshots/desktop2.png)
+![Desktop Screenshot 3](./public/screenshots/desktop3.png)
+![Desktop Screenshot 4](./public/screenshots/desktop4.png)
+
+7. ## 🎥 Presentation
+
+Check out our project's presentation for a more detailed overview of the concept, design, and functionality.
+
+[Click here to view the presentation](https://docs.google.com/presentation/d/1pLS9KXpcTahsZXFgFiSju9NGrxZGW4eN/edit?usp=sharing&ouid=107922569683596588419&rtpof=true&sd=true)
+
+
+8. ## 📂 Related Repositories
 
 In addition to the frontend repository, here are links to other parts of the project:
 
@@ -69,7 +91,7 @@ In addition to the frontend repository, here are links to other parts of the pro
 - [Data Science Repository](https://github.com/tipping-points/data_science_comercio_local)
 
 
-8. ## 🤝 Contributing
+9. ## 🤝 Contributing
 
 Contributions are more than welcome! If you have suggestions for improvements, new features, or if you spot any bugs, feel free to open an issue or submit a pull request.
 
@@ -80,7 +102,7 @@ Contributions are more than welcome! If you have suggestions for improvements, n
    git checkout -b feature/AmazingFeature
 
 
-8. ### 🎉 That's all, folks!
+10. ### 🎉 That's all, folks!
 
 Thanks for checking out this project! If you enjoyed it, feel free to give it a ⭐️ on GitHub and follow us for more awesome projects!
 
