@@ -8,10 +8,9 @@ const useFetch = (url) => {
         const fetchData = async () => {
             try {
                 const response = await fetch(url, {
-                    method: "GET",
                     headers: {
-                        "X-Requested-With": "XMLHttpRequest",
-                    },
+                        'Content-Type': 'application/json'
+                }
                 });
                 if (!response.ok) {
                     throw new Error(
