@@ -45,32 +45,32 @@ const PopularSection = forwardRef((props, ref) => {
     if (error) {
         return <div>Error al cargar los datos: {error}</div>;
     }
-      
-      return (
+
+    return (
         <section ref={ref} className="py-14 bg-darkBlue">
             <div className="max-w-screen-lg px-6 mx-auto">
                 <h2 className="mb-10 text-4xl text-center text-white font-sora">Els barris més populars</h2>
                 <div className="mb-12">
-                    <img src="/popular/panoramica.webp" alt="Aerial view of Barcelona" className="object-cover w-full rounded-lg shadow-lg h-72" />
+                    <img src="/popular/panoramica.webp" alt="Foto aèria de Barcelona" className="object-cover w-full rounded-lg shadow-lg h-72" />
                 </div>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {districts.map((district, index) => (
-                        <PopularCard 
-                            key={index} 
-                            name={district.name} 
-                            image={district.image} 
+                        <PopularCard
+                            key={index}
+                            name={district.name}
+                            image={district.image}
                             description={district.description}
-                            onClick={() => handleCardClick(district)} 
+                            onClick={() => handleCardClick(district)}
                         />
                     ))}
                 </div>
             </div>
 
             {selectedDistrict && (
-                <Modal 
-                    show={true} 
-                    onClose={handleCloseModal} 
-                    district={selectedDistrict} 
+                <Modal
+                    show={true}
+                    onClose={handleCloseModal}
+                    district={selectedDistrict}
                 />
             )}
         </section>
